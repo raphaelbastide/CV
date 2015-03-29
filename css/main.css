@@ -1,0 +1,26 @@
+body{font:16px/20px sans-serif;margin:30px;}
+header img{display:block; float:left;}
+header .tools{padding:55px 0 0 130px;}
+header p{clear:both; margin:30px 0 0 0;}
+h2{font:1.2em serif; margin:20px 0 0 0;font-weight:bold;}
+p{margin:0 0 0 0;}
+p.date{font: .7em monospace;margin:0 0 3px 0; letter-spacing:1px;}
+em, i{font-style:italic;}
+body.langfr .en{display:none;}
+body.langen .fr{display:none;}
+button{transform: skewX(-20deg)}
+.btnprint{margin-left:15px;}
+.toprint{display:none;}
+
+@media print {
+	body{font:9pt/10pt serif; padding:0cm;}
+	header img{width:2cm; height:auto;}
+	button{display:none;}
+	a{color:black; text-decoration:none;}
+	a:link:after, a:visited:after{content:" [" attr(href) "]"; font: .7em steps-mono, monospace;}
+	header a:link:after, a:visited:after { content:"";}
+	.toprint{display:block;}
+	.noprint{display:none;}
+	.star{ display:block; width:1cm; height:auto; margin:.5cm auto 0 auto;}
+	.message{display:block; position:absolute; top:0; right:1cm; font-style:italic;}
+}
