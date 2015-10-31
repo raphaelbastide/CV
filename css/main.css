@@ -12,12 +12,14 @@ button{transform: skewX(-20deg)}
 .btnprint{margin-left:15px;}
 .toprint{display:none;}
 
+
 @media print {
-	body{font:9pt/10pt freesans, serif; padding:0cm;}
+	img{display:none;}
+	body{font:9pt/10pt freesans, serif; padding:0cm; margin:0;}
 	header img{width:2cm; height:auto;}
 	button{display:none;}
 	a{color:black; text-decoration:none;}
-	a:link:after, a:visited:after{content:" [" attr(href) "]"; font: .7em steps-mono, monospace;}
+	a:link:after, a:visited:after{content:" " attr(href) ""; font: .7em steps-mono, monospace;}
 	header a:link:after, a:visited:after { content:"";}
 	.toprint{display:block;}
 	.noprint{display:none;}
